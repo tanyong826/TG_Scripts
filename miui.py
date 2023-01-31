@@ -13,8 +13,10 @@ def Phone(account, password):
     url = "https://account.xiaomi.com/pass/serviceLoginAuth2"
     headers = {
         "Content-Type": "application/x-www-form-urlencoded",
-        "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 12; M2007J17C Build/SKQ1.211006.001) APP/xiaomi.vipaccount APPV/220301 MK/UmVkbWkgTm90ZSA5IFBybw== PassportSDK/3.7.8 passport-ui/3.7.8",
-        "Cookie": "deviceId=X0jMu7b0w-jcne-S; pass_o=2d25bb648d023d7f; sdkVersion=accountsdk-2020.01.09",
+        "User-Agent":
+        "Dalvik/2.1.0 (Linux; U; Android 12; M2007J17C Build/SKQ1.211006.001) APP/xiaomi.vipaccount APPV/220301 MK/UmVkbWkgTm90ZSA5IFBybw== PassportSDK/3.7.8 passport-ui/3.7.8",
+        "Cookie":
+        "deviceId=X0jMu7b0w-jcne-S; pass_o=2d25bb648d023d7f; sdkVersion=accountsdk-2020.01.09",
         "Host": "account.xiaomi.com",
         "Connection": "Keep-Alive",
         "Accept-Encoding": "gzip"
@@ -30,15 +32,19 @@ def Phone(account, password):
         "_sign": "ZJxpm3Q5cu0qDOMkKdWYRPeCwps%3D",
         "_locale": "zh_CN"
     }
-    Auth = requests.post(url=url, headers=headers, data=data).text.replace("&&&START&&&", "")
+    Auth = requests.post(url=url, headers=headers,
+                         data=data).text.replace("&&&START&&&", "")
     Auth = json.loads(Auth)
     ssecurity = Auth["ssecurity"]
     nonce = Auth["nonce"]
     sha1 = hashlib.sha1()
     Str = "nonce=" + str(nonce) + "&" + ssecurity
     sha1.update(Str.encode("utf-8"))
-    clientSign = base64.encodebytes(binascii.a2b_hex(sha1.hexdigest().encode("utf-8"))).decode(encoding="utf-8").strip()
-    nurl = Auth["location"] + "&_userIdNeedEncrypt=true&clientSign=" + clientSign
+    clientSign = base64.encodebytes(
+        binascii.a2b_hex(sha1.hexdigest().encode("utf-8"))).decode(
+            encoding="utf-8").strip()
+    nurl = Auth[
+        "location"] + "&_userIdNeedEncrypt=true&clientSign=" + clientSign
 
     sts = requests.get(url=nurl)
     return requests.utils.dict_from_cookiejar(sts.cookies)
@@ -134,5 +140,5 @@ for i in range(len(account)):
             print('浏览帖子成功，获得积分： ' + str(result_watch['entity']['score']))
         else:
             print(result_watch['message'] + '，今日已达上限')
-    print('等待1min执行下一个帐号')
+
     time.sleep(60)
