@@ -44,9 +44,8 @@ ddnsto自动续费七天
 电报频道 https://t.me/wd210010_1 交流群 https://t.me/+XSi9N-Nf3cFhODJl
 
 # 东东自动挂机上车地址 
-地址1：http://jdflxfd.tk/login 
+地址：http://jdflxfd.tk/login 
 
-地址2：http://krystal033.tk/login
 
 # 赞赏码 觉得帮助到你了 可以赞赏点哈哈
 ![未命名1673402622](https://user-images.githubusercontent.com/76995206/211700923-39913716-be27-4c26-8831-5dca15ecefc2.png)
