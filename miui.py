@@ -76,7 +76,7 @@ for i in range(len(account)):
     userId = result_user['entity']['userId']
     print('*************'+'\n'+f'开始第{i + 1}个账号签到'+'\n'+'签到结果：')
     print('userId: '+userId + ' 用户名: '+result_user['entity']['userName']+ ' 段位: '+ result_user['entity']['userGrowLevelInfo']['showLevel'])
-    print(result['message'])
+    print(result)
 # 点赞任务
     print('开始加入点赞任务>>>>')
     for a in range(2):
