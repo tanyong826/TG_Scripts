@@ -43,6 +43,12 @@ ddnsto自动续费七天
 
 电报频道 https://t.me/wd210010_1 交流群 https://t.me/+XSi9N-Nf3cFhODJl
 
+#部署的其他大佬的签到站支持挺多签到 
+
+地址：http://krystal033.tk/my/ 可以看看有没有自己需要的签到
+
+如果想自己部署可以参考大佬项目 https://github.com/qiandao-today/qiandao
+
 # 东东自动挂机上车地址 
 地址：http://jdflxfd.tk/login 
 
